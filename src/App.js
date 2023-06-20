@@ -1,5 +1,6 @@
 import "./App.css";
 import { useEffect, useState } from "react";
+import BeatLoader from "react-spinners/BeatLoader";
 
 function App() {
   const [search, setSearch] = useState("Allahabad");
@@ -17,12 +18,21 @@ function App() {
     },
   };
   useEffect(() => {
-    fetch(
-      `https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=${search}`,
-      options
-    )
-      .then((res) => res.json())
-      .then((res) => setempData(res.temp));
+    if (search === "") {
+      fetch(
+        `https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Allahabad`,
+        options
+      )
+        .then((res) => res.json())
+        .then((res) => setempData(res.temp));
+    } else {
+      fetch(
+        `https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=${search}`,
+        options
+      )
+        .then((res) => res.json())
+        .then((res) => setempData(res.temp));
+    }
   }, [search]);
 
   function addCity(e) {
@@ -76,12 +86,26 @@ function App() {
       </div>
 
       <div className="display">
-        <h4>{search}</h4>
+        <h4>{search === "" ? "Allahabad" : search}</h4>
         <p>
           {day} /{month} /{year}
         </p>
         <div className="temp">
-          <h1>{temp}°C</h1>
+          <h1>
+          {temp || (
+  <BeatLoader
+    size={10}
+    aria-label="Loading Spinner"
+    data-testid="loader"
+    color="#545B77"
+    style={{
+      display: "inline-block",
+    }}
+  />
+)}
+
+            °C
+          </h1>
         </div>
         <h2>Clouds</h2>
       </div>
