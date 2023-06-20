@@ -7,7 +7,7 @@ function App() {
   const [temp, setempData] = useState("");
   const [isDayMode, setIsDayMode] = useState(true);
   const [backgroundImage, setBackgroundImage] = useState(
-    "https://th.bing.com/th/id/OIG.w8vlXpi_YRx1V4iowPi6?pid=ImgGn"
+    "https://img.freepik.com/free-photo/beautiful-sunset-sky_74190-2036.jpg?w=1060&t=st=1687294439~exp=1687295039~hmac=f118e76ee37701bb5861778b2de7f3da596fd282af7bb974925d7e548e06fa6a"
   );
 
   const options = {
@@ -48,8 +48,8 @@ function App() {
     setIsDayMode(!isDayMode);
     setBackgroundImage(
       isDayMode
-        ? "https://th.bing.com/th/id/OIG.V2Y4TC1_9Rj39TrzqEZM?pid=ImgGn"
-        : "https://img3.wallspic.com/previews/0/2/5/9/39520/39520-night_sky-clip_art-sky-cartoon-star-x750.jpg"
+        ? "https://img3.wallspic.com/previews/0/2/5/9/39520/39520-night_sky-clip_art-sky-cartoon-star-x750.jpg"
+        : "https://img.freepik.com/free-photo/beautiful-sunset-sky_74190-2036.jpg?w=1060&t=st=1687294439~exp=1687295039~hmac=f118e76ee37701bb5861778b2de7f3da596fd282af7bb974925d7e548e06fa6a"
     );
   }
 
@@ -97,7 +97,7 @@ function App() {
     size={10}
     aria-label="Loading Spinner"
     data-testid="loader"
-    color="#99DBF5"
+    color="#F24C3D"
     style={{
       display: "inline-block",
     }}
