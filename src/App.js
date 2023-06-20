@@ -49,7 +49,7 @@ function App() {
     setBackgroundImage(
       isDayMode
         ? "https://th.bing.com/th/id/OIG.V2Y4TC1_9Rj39TrzqEZM?pid=ImgGn"
-        : "https://th.bing.com/th/id/OIG.w8vlXpi_YRx1V4iowPi6?pid=ImgGn"
+        : "https://img3.wallspic.com/previews/0/2/5/9/39520/39520-night_sky-clip_art-sky-cartoon-star-x750.jpg"
     );
   }
 
@@ -97,7 +97,7 @@ function App() {
     size={10}
     aria-label="Loading Spinner"
     data-testid="loader"
-    color="#545B77"
+    color="#99DBF5"
     style={{
       display: "inline-block",
     }}
